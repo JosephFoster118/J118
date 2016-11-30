@@ -1,0 +1,50 @@
+\begin{theindex}
+
+  \item {add}
+    \subitem {J118\+::\+Math\+::\+Vector2\+D}, \hyperpage{11}, 
+		\hyperpage{13}
+
+  \indexspace
+
+  \item {dot\+Product}
+    \subitem {J118\+::\+Math\+::\+Vector2\+D}, \hyperpage{13}
+
+  \indexspace
+
+  \item {get\+X}
+    \subitem {J118\+::\+Math\+::\+Vector2\+D}, \hyperpage{13}
+  \item {get\+Y}
+    \subitem {J118\+::\+Math\+::\+Vector2\+D}, \hyperpage{14}
+
+  \indexspace
+
+  \item {J118\+::\+Error\+Handling\+::\+Exception}, \hyperpage{9}
+  \item {J118\+::\+Math\+::\+Matrix}, \hyperpage{9}
+  \item {J118\+::\+Math\+::\+Matrix\+Multiply\+Inval\+Dems}, 
+		\hyperpage{10}
+  \item {J118\+::\+Math\+::\+Matrix\+Not\+Initialized}, \hyperpage{10}
+  \item {J118\+::\+Math\+::\+Vector2\+D}, \hyperpage{10}
+    \subitem {add}, \hyperpage{11}, \hyperpage{13}
+    \subitem {dot\+Product}, \hyperpage{13}
+    \subitem {get\+X}, \hyperpage{13}
+    \subitem {get\+Y}, \hyperpage{14}
+    \subitem {operator$\ast$}, \hyperpage{14}
+    \subitem {operator+}, \hyperpage{14}
+    \subitem {operator-\/}, \hyperpage{14}
+    \subitem {Vector2\+D}, \hyperpage{11}
+
+  \indexspace
+
+  \item {operator$\ast$}
+    \subitem {J118\+::\+Math\+::\+Vector2\+D}, \hyperpage{14}
+  \item {operator+}
+    \subitem {J118\+::\+Math\+::\+Vector2\+D}, \hyperpage{14}
+  \item {operator-\/}
+    \subitem {J118\+::\+Math\+::\+Vector2\+D}, \hyperpage{14}
+
+  \indexspace
+
+  \item {Vector2\+D}
+    \subitem {J118\+::\+Math\+::\+Vector2\+D}, \hyperpage{11}
+
+\end{theindex}

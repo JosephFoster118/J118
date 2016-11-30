@@ -1,0 +1,55 @@
+\hypertarget{_matrix_8h_source}{}\section{Matrix.\+h}
+\label{_matrix_8h_source}\index{include/\+J118/\+Matrix.\+h@{include/\+J118/\+Matrix.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{comment}{/*}
+00002 \textcolor{comment}{ * Matrix.h}
+00003 \textcolor{comment}{ *}
+00004 \textcolor{comment}{ *  Created on: Oct 21, 2016}
+00005 \textcolor{comment}{ *      Author: joseph}
+00006 \textcolor{comment}{ */}
+00007 
+00008 \textcolor{preprocessor}{#ifndef MATRIX\_H\_}
+00009 \textcolor{preprocessor}{#define MATRIX\_H\_}
+00010 
+00011 \textcolor{preprocessor}{#include <stdint.h>}
+00012 \textcolor{preprocessor}{#include <stdlib.h>}
+00013 \textcolor{preprocessor}{#include <stdio.h>}
+00014 \textcolor{preprocessor}{#include <string.h>}
+00015 \textcolor{preprocessor}{#include <exception>}
+00016 
+00017 \textcolor{preprocessor}{#define MATRIX\_ERROR\_OUTPUT\_BUFFER\_SIZE 256}
+00018 
+00019 \textcolor{keyword}{namespace }\hyperlink{namespace_j118}{J118}
+00020 \{
+00021 \textcolor{keyword}{namespace }Math
+00022 \{
+00023 
+00026 
+\hypertarget{_matrix_8h_source_l00027}{}\hyperlink{class_j118_1_1_math_1_1_matrix}{00027} \textcolor{keyword}{class }\hyperlink{class_j118_1_1_math_1_1_matrix}{Matrix}
+00028 \{
+00029 \textcolor{keyword}{public}:
+00030     \hyperlink{class_j118_1_1_math_1_1_matrix}{Matrix}();
+00031     \hyperlink{class_j118_1_1_math_1_1_matrix}{Matrix}(uint32\_t row\_c, uint32\_t col\_c);
+00032     \textcolor{keyword}{virtual} ~\hyperlink{class_j118_1_1_math_1_1_matrix}{Matrix}();
+00033     \textcolor{keywordtype}{double} getElement(uint32\_t r, uint32\_t c);
+00034     \textcolor{keywordtype}{void} setElement(uint32\_t r, uint32\_t c, \textcolor{keywordtype}{double} v);
+00035     \hyperlink{class_j118_1_1_math_1_1_matrix}{Matrix} multiply(\textcolor{keywordtype}{double} scale);
+00036     uint32\_t getRows();
+00037     uint32\_t getCols();
+00038 
+00039     \textcolor{comment}{//Statics}
+00040 
+00041     \textcolor{comment}{//Overloaded Operators}
+00042     \textcolor{keywordtype}{void} operator=(\textcolor{keyword}{const} \hyperlink{class_j118_1_1_math_1_1_matrix}{Matrix} &d);
+00043 \textcolor{keyword}{protected}:
+00044     uint32\_t rows;
+00045     uint32\_t cols;
+00046     \textcolor{keywordtype}{double}** data;
+00047 \};
+00048 
+00049 \} \textcolor{comment}{/* namespace Math */}
+00050 \} \textcolor{comment}{/* namespace J118 */}
+00051 
+00052 \textcolor{preprocessor}{#endif }\textcolor{comment}{/* MATRIX\_H\_ */}\textcolor{preprocessor}{}
+\end{DoxyCode}

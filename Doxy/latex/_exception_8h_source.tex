@@ -1,0 +1,43 @@
+\hypertarget{_exception_8h_source}{}\section{Exception.\+h}
+\label{_exception_8h_source}\index{include/\+J118/\+Exception.\+h@{include/\+J118/\+Exception.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{comment}{/*}
+00002 \textcolor{comment}{ * Exception.h}
+00003 \textcolor{comment}{ *}
+00004 \textcolor{comment}{ *  Created on: Nov 26, 2016}
+00005 \textcolor{comment}{ *      Author: joseph}
+00006 \textcolor{comment}{ */}
+00007 
+00008 \textcolor{preprocessor}{#ifndef EXCEPTION\_H\_}
+00009 \textcolor{preprocessor}{#define EXCEPTION\_H\_}
+00010 
+00011 \textcolor{preprocessor}{#include <string>}
+00012 
+00013 \textcolor{keyword}{namespace }\hyperlink{namespace_j118}{J118}
+00014 \{
+00015 \textcolor{keyword}{namespace }ErrorHandling
+00016 \{
+00017 
+\hypertarget{_exception_8h_source_l00018}{}\hyperlink{class_j118_1_1_error_handling_1_1_exception}{00018} \textcolor{keyword}{class }\hyperlink{class_j118_1_1_error_handling_1_1_exception}{Exception}
+00019 \{
+00020 \textcolor{keyword}{public}:
+00021     \hyperlink{class_j118_1_1_error_handling_1_1_exception_ad198efcdbab0bfcc391be37faa902b7c}{Exception}();
+00022     \hyperlink{class_j118_1_1_error_handling_1_1_exception_ad198efcdbab0bfcc391be37faa902b7c}{Exception}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id}, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* n, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* d);
+00023     \textcolor{keyword}{virtual} ~\hyperlink{class_j118_1_1_error_handling_1_1_exception}{Exception}();
+00024 
+00025     \textcolor{keywordtype}{int} \hyperlink{class_j118_1_1_error_handling_1_1_exception_a23cb87bd08a68063b4631fcb0a0ce813}{getId}();
+00026     std::string \hyperlink{class_j118_1_1_error_handling_1_1_exception_ad60486b9b68b001eb8141a951da92b46}{getName}();
+00027     std::string \hyperlink{class_j118_1_1_error_handling_1_1_exception_a94983c1a3e04e1d2fd3a9db88eadd836}{getDesc}();
+00028 
+00029 \textcolor{keyword}{protected}:
+00030     \textcolor{keywordtype}{int} error\_id;
+00031     std::string name;
+00032     std::string desc;
+00033 \};
+00034 
+00035 \} \textcolor{comment}{/* namespace ErrorHandling */}
+00036 \} \textcolor{comment}{/* namespace J118 */}
+00037 
+00038 \textcolor{preprocessor}{#endif }\textcolor{comment}{/* EXCEPTION\_H\_ */}\textcolor{preprocessor}{}
+\end{DoxyCode}

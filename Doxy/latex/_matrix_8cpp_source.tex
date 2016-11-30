@@ -1,0 +1,162 @@
+\hypertarget{_matrix_8cpp_source}{}\section{Matrix.\+cpp}
+\label{_matrix_8cpp_source}\index{src/\+Matrix.\+cpp@{src/\+Matrix.\+cpp}}
+
+\begin{DoxyCode}
+00001 \textcolor{comment}{/*}
+00002 \textcolor{comment}{ * Matrix.cpp}
+00003 \textcolor{comment}{ *}
+00004 \textcolor{comment}{ *  Created on: Oct 21, 2016}
+00005 \textcolor{comment}{ *      Author: joseph}
+00006 \textcolor{comment}{ */}
+00007 
+00008 \textcolor{preprocessor}{#include "J118/Matrix.h"}
+00009 
+00010 \textcolor{keyword}{namespace }\hyperlink{namespace_j118}{J118}
+00011 \{
+00012 \textcolor{keyword}{namespace }Math
+00013 \{
+00014 
+00015 \textcolor{keyword}{using namespace }\hyperlink{namespacestd}{std};
+00016 
+00017 \textcolor{comment}{//Exceptions}
+\hypertarget{_matrix_8cpp_source_l00018}{}\hyperlink{class_j118_1_1_math_1_1_matrix_not_initialized}{00018} \textcolor{keyword}{class }\hyperlink{class_j118_1_1_math_1_1_matrix_not_initialized}{MatrixNotInitialized}: \textcolor{keyword}{public} exception
+00019 \{
+00020     \textcolor{keyword}{virtual} \textcolor{keyword}{const} \textcolor{keywordtype}{char}* what() \textcolor{keyword}{const} \textcolor{keywordflow}{throw} ()
+00021     \{
+00022         \textcolor{keywordflow}{return} \textcolor{stringliteral}{"Matrix data not initialized"};
+00023     \}
+00024 \};
+00025 
+\hypertarget{_matrix_8cpp_source_l00026}{}\hyperlink{class_j118_1_1_math_1_1_matrix_multiply_inval_dems}{00026} \textcolor{keyword}{class }\hyperlink{class_j118_1_1_math_1_1_matrix_multiply_inval_dems}{MatrixMultiplyInvalDems}: \textcolor{keyword}{public} exception
+00027 \{
+00028     \textcolor{keywordtype}{char} output[MATRIX\_ERROR\_OUTPUT\_BUFFER\_SIZE];
+00029 \textcolor{keyword}{public}:
+00030     \hyperlink{class_j118_1_1_math_1_1_matrix_multiply_inval_dems}{MatrixMultiplyInvalDems}(uint32\_t a\_r,uint32\_t a\_c,uint32\_t b\_r,uint32\_t b\_c)
+00031     \{
+00032         memset(output,0,MATRIX\_ERROR\_OUTPUT\_BUFFER\_SIZE);
+00033         sprintf(output,\textcolor{stringliteral}{"Invalid dimensions for multiplication, given dimensions a=[%d,%d] b=[%d,%d]"},
+00034                 a\_r,a\_c,
+00035                 b\_r,b\_c);
+00036     \}
+00037     \textcolor{keyword}{virtual} \textcolor{keyword}{const} \textcolor{keywordtype}{char}* what() \textcolor{keyword}{const} \textcolor{keywordflow}{throw} ()
+00038     \{
+00039         \textcolor{keywordflow}{return} output;
+00040     \}
+00041 \};
+00042 
+00043 \textcolor{comment}{//Definitions}
+00044 
+00045 Matrix::Matrix()
+00046 \{
+00047     rows = 0;
+00048     cols = 0;
+00049     data = NULL;
+00050 \}
+00051 
+00052 Matrix::Matrix(uint32\_t row\_c, uint32\_t col\_c)
+00053 \{
+00054     rows = row\_c;
+00055     cols = col\_c;
+00056     data = \textcolor{keyword}{new} \textcolor{keywordtype}{double}*[rows];
+00057     \textcolor{keywordflow}{for} (uint32\_t i = 0; i < rows; i++)
+00058     \{
+00059         data[i] = \textcolor{keyword}{new} \textcolor{keywordtype}{double}[cols];
+00060     \}
+00061     \textcolor{keywordflow}{for} (uint32\_t i = 0; i < rows; i++)
+00062     \{
+00063         \textcolor{keywordflow}{for} (uint32\_t j = 0; j < cols; j++)
+00064         \{
+00065             data[i][j] = 0.0;
+00066         \}
+00067     \}
+00068 \}
+00069 
+00070 Matrix::~Matrix()
+00071 \{
+00072     \textcolor{keywordflow}{if} (data != NULL)
+00073     \{
+00074         \textcolor{keywordflow}{for} (uint32\_t i = 0; i < rows; i++)
+00075         \{
+00076             \textcolor{keyword}{delete}[] data[i];
+00077         \}
+00078         \textcolor{keyword}{delete}[] data;
+00079     \}
+00080 \}
+00081 
+00082 \textcolor{keywordtype}{double} Matrix::getElement(uint32\_t r, uint32\_t c)
+00083 \{
+00084     \textcolor{keywordflow}{if} (data == NULL)
+00085     \{
+00086         \textcolor{keywordflow}{throw} MatrixNotInitialized();
+00087     \}
+00088     \textcolor{keywordflow}{return} data[r][c];
+00089 \}
+00090 
+00091 \textcolor{keywordtype}{void} Matrix::setElement(uint32\_t r, uint32\_t c, \textcolor{keywordtype}{double} v)
+00092 \{
+00093     \textcolor{keywordflow}{if} (data == NULL)
+00094     \{
+00095         \textcolor{keywordflow}{throw} MatrixNotInitialized();
+00096     \}
+00097     data[r][c] = v;
+00098 \}
+00099 
+00100 Matrix Matrix::multiply(\textcolor{keywordtype}{double} scale)
+00101 \{
+00102     \textcolor{keywordflow}{if} (data == NULL)
+00103     \{
+00104         \textcolor{keywordflow}{throw} MatrixNotInitialized();
+00105     \}
+00106     Matrix result(this->rows, this->cols);
+00107     \textcolor{keywordflow}{for} (uint32\_t i = 0; i < this->rows; i++)
+00108     \{
+00109         \textcolor{keywordflow}{for} (uint32\_t j = 0; j < this->cols; j++)
+00110         \{
+00111             result.setElement(i,j,this->getElement(i,j)*scale);
+00112         \}
+00113     \}
+00114     \textcolor{keywordflow}{return} result;
+00115 \}
+00116 
+00117 uint32\_t Matrix::getRows()
+00118 \{
+00119     \textcolor{keywordflow}{return} rows;
+00120 \}
+00121 
+00122 uint32\_t Matrix::getCols()
+00123 \{
+00124     \textcolor{keywordflow}{return} cols;
+00125 \}
+00126 
+00127 \textcolor{comment}{//Overloaded Operators}
+00128 \textcolor{keywordtype}{void} Matrix::operator=(\textcolor{keyword}{const} Matrix &d)
+00129 \{
+00130     rows = d.rows;
+00131     cols = d.cols;
+00132 
+00133     \textcolor{keywordflow}{if} (data != NULL)
+00134     \{
+00135         \textcolor{keywordflow}{for} (uint32\_t i = 0; i < rows; i++)
+00136         \{
+00137             \textcolor{keyword}{delete}[] data[i];
+00138         \}
+00139         \textcolor{keyword}{delete}[] data;
+00140     \}
+00141     data = \textcolor{keyword}{new} \textcolor{keywordtype}{double}*[rows];
+00142     \textcolor{keywordflow}{for} (uint32\_t i = 0; i < rows; i++)
+00143     \{
+00144         data[i] = \textcolor{keyword}{new} \textcolor{keywordtype}{double}[cols];
+00145     \}
+00146     \textcolor{keywordflow}{for} (uint32\_t i = 0; i < rows; i++)
+00147     \{
+00148         \textcolor{keywordflow}{for} (uint32\_t j = 0; j < cols; j++)
+00149         \{
+00150             data[i][j] = d.data[i][j];
+00151         \}
+00152     \}
+00153 \}
+00154 
+00155 \} \textcolor{comment}{/* namespace Math */}
+00156 \} \textcolor{comment}{/* namespace J118 */}
+00157 
+\end{DoxyCode}
