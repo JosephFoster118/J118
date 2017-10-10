@@ -78,6 +78,7 @@ void Output::defualtPrintf(const char* str, ...)
 void Output::destroy()
 {
 	SAFE_FILE_CLOSE(GlobalOutputFile);
+	SAFE_DELETE_ARRAY(GlobalOutputFileName);
 }
 
 void Output::setOutput(OutputType type)
