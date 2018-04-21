@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,27 +6,47 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/josep/Documents/Software/HeartlessHerosServer/J118/src/Exception.cpp
+/home/joseph/Software/J118/src/ArgParse.cpp
+J118/ArgParse.h
+/home/joseph/Software/J118/src/J118/ArgParse.h
+
+/home/joseph/Software/J118/src/Exception.cpp
 J118/Exception.h
-C:/Users/josep/Documents/Software/HeartlessHerosServer/J118/src/J118/Exception.h
+/home/joseph/Software/J118/src/J118/Exception.h
 
-C:/Users/josep/Documents/Software/HeartlessHerosServer/J118/src/Matrix.cpp
+/home/joseph/Software/J118/src/Matrix.cpp
 J118/Matrix.h
-C:/Users/josep/Documents/Software/HeartlessHerosServer/J118/src/J118/Matrix.h
+/home/joseph/Software/J118/src/J118/Matrix.h
 
-C:/Users/josep/Documents/Software/HeartlessHerosServer/J118/src/Output.cpp
+/home/joseph/Software/J118/src/Output.cpp
 J118/Output.h
-C:/Users/josep/Documents/Software/HeartlessHerosServer/J118/src/J118/Output.h
+/home/joseph/Software/J118/src/J118/Output.h
 
-C:/Users/josep/Documents/Software/HeartlessHerosServer/J118/src/Vector2D.cpp
+/home/joseph/Software/J118/src/Thread.cpp
+J118/Thread.h
+/home/joseph/Software/J118/src/J118/Thread.h
+
+/home/joseph/Software/J118/src/Vector2D.cpp
 J118/Vector2D.h
 -
 
-J118/include/J118/Exception.h
+include/J118/ArgParse.h
+stdio.h
+-
+stdlib.h
+-
+stdint.h
+-
+string
+-
+vector
+-
+
+include/J118/Exception.h
 string
 -
 
-J118/include/J118/Matrix.h
+include/J118/Matrix.h
 stdint.h
 -
 stdlib.h
@@ -38,7 +58,7 @@ string.h
 exception
 -
 
-J118/include/J118/Output.h
+include/J118/Output.h
 stdio.h
 -
 stdlib.h
@@ -52,11 +72,25 @@ stdarg.h
 time.h
 -
 J118/UtilityMacros.h
-J118/include/J118/J118/UtilityMacros.h
+include/J118/J118/UtilityMacros.h
 
-J118/include/J118/UtilityMacros.h
+include/J118/Thread.h
+string.h
+-
+stdint.h
+-
+stdlib.h
+-
+exception
+-
+thread
+-
+pthread.h
+-
 
-J118/include/J118/Vector2D.h
+include/J118/UtilityMacros.h
+
+include/J118/Vector2D.h
 stdio.h
 -
 

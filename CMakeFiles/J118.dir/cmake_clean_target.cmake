@@ -1,3 +1,3 @@
 file(REMOVE_RECURSE
-  "../lib/libJ118.a"
+  "libJ118.a"
 )

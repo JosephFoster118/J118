@@ -1,0 +1,4 @@
+#!/bin/bash
+pwd
+g++ -o test test.cpp -L . -I include -l J118
+ 

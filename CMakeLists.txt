@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.6 FATAL_ERROR)
-
+set (CMAKE_CXX_STANDARD 11)
 set(PROJECT_NAME J118)
 message(STATUS "************  ${PROJECT_NAME} ************")
 project(${PROJECT_NAME})

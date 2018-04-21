@@ -9,8 +9,7 @@
 
 namespace J118
 {
-namespace Math
-{
+
 
 
 
@@ -166,12 +165,18 @@ double Vector2D::operator*(Vector2D multiplier)
 	return x_comp*multiplier.getY() + y_comp*multiplier.getX();
 }
 
+Vector2D Vector2D::operator*(double magnitude)
+{
+	return Vector2D(x_comp*magnitude, y_comp*magnitude);
+}
+
+Vector2D::
+	
 Vector2D::~Vector2D()
 {
 	//Nothing yet
 }
 
-} /* namespace Math */
 } /* namespace J118 */
 
 

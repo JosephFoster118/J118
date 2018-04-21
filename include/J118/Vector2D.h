@@ -10,10 +10,10 @@
 
 #include <stdio.h>
 
+
 namespace J118
 {
-namespace Math
-{
+
 
 //! \todo: add overloaded operators
 //! \todo: add cross product
@@ -36,6 +36,8 @@ public:
 	static double dotProduct(Vector2D multiplicand, Vector2D multiplier);
 	double dotProduct(Vector2D multiplier);
 	double operator*(Vector2D multiplier);
+	Vector2D operator*(double magnitude);
+	
 
 	virtual ~Vector2D();
 private:
@@ -43,7 +45,6 @@ private:
 	double y_comp;
 };
 
-} /* namespace Math */
 } /* namespace J118 */
 
 #endif /* INCLUDE_J118_VECTOR2D_H_ */
