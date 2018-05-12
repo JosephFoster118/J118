@@ -6,6 +6,10 @@
 #include <stdlib.h>
 #include <exception>
 #include <thread>
+#include <mutex>
+
+//J118 Library Includ1es
+#include <J118/UtilityMacros.h>
 
 //OS Specific Includes
 #ifdef __linux__
@@ -33,6 +37,7 @@ class Thread
 	
 private:
 	std::thread* thread_handle;
+	std::mutex* data_lock;
 	
 	
 protected:

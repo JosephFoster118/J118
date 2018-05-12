@@ -3,7 +3,7 @@
 if( pointer != nullptr)\
 {\
 	delete pointer;\
-	pointer = nullptr\
+	pointer = nullptr;\
 }\
 
 #define SAFE_DELETE_ARRAY(pointer)\

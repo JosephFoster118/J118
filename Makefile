@@ -258,6 +258,33 @@ src/Thread.cpp.s:
 	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Thread.cpp.s
 .PHONY : src/Thread.cpp.s
 
+src/UDPServer.o: src/UDPServer.cpp.o
+
+.PHONY : src/UDPServer.o
+
+# target to build an object file
+src/UDPServer.cpp.o:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/UDPServer.cpp.o
+.PHONY : src/UDPServer.cpp.o
+
+src/UDPServer.i: src/UDPServer.cpp.i
+
+.PHONY : src/UDPServer.i
+
+# target to preprocess a source file
+src/UDPServer.cpp.i:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/UDPServer.cpp.i
+.PHONY : src/UDPServer.cpp.i
+
+src/UDPServer.s: src/UDPServer.cpp.s
+
+.PHONY : src/UDPServer.s
+
+# target to generate assembly for a file
+src/UDPServer.cpp.s:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/UDPServer.cpp.s
+.PHONY : src/UDPServer.cpp.s
+
 src/Vector2D.o: src/Vector2D.cpp.o
 
 .PHONY : src/Vector2D.o
@@ -309,6 +336,9 @@ help:
 	@echo "... src/Thread.o"
 	@echo "... src/Thread.i"
 	@echo "... src/Thread.s"
+	@echo "... src/UDPServer.o"
+	@echo "... src/UDPServer.i"
+	@echo "... src/UDPServer.s"
 	@echo "... src/Vector2D.o"
 	@echo "... src/Vector2D.i"
 	@echo "... src/Vector2D.s"

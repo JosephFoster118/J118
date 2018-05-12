@@ -16,6 +16,9 @@ CMakeFiles/J118.dir/src/Output.cpp.o: include/J118/UtilityMacros.h
 
 CMakeFiles/J118.dir/src/Thread.cpp.o: src/Thread.cpp
 CMakeFiles/J118.dir/src/Thread.cpp.o: include/J118/Thread.h
+CMakeFiles/J118.dir/src/Thread.cpp.o: include/J118/UtilityMacros.h
+
+CMakeFiles/J118.dir/src/UDPServer.cpp.o: src/UDPServer.cpp
 
 CMakeFiles/J118.dir/src/Vector2D.cpp.o: src/Vector2D.cpp
 CMakeFiles/J118.dir/src/Vector2D.cpp.o: include/J118/Vector2D.h
