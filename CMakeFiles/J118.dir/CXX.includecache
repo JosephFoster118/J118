@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,29 +6,27 @@
 
 #IncludeRegexTransform: 
 
-/home/joseph/Software/J118/src/ArgParse.cpp
+C:/Users/USER/Documents/Software/J118/src/ArgParse.cpp
 J118/ArgParse.h
-/home/joseph/Software/J118/src/J118/ArgParse.h
+C:/Users/USER/Documents/Software/J118/src/J118/ArgParse.h
 
-/home/joseph/Software/J118/src/Exception.cpp
+C:/Users/USER/Documents/Software/J118/src/Exception.cpp
 J118/Exception.h
-/home/joseph/Software/J118/src/J118/Exception.h
+C:/Users/USER/Documents/Software/J118/src/J118/Exception.h
 
-/home/joseph/Software/J118/src/Matrix.cpp
+C:/Users/USER/Documents/Software/J118/src/Matrix.cpp
 J118/Matrix.h
-/home/joseph/Software/J118/src/J118/Matrix.h
+C:/Users/USER/Documents/Software/J118/src/J118/Matrix.h
 
-/home/joseph/Software/J118/src/Output.cpp
+C:/Users/USER/Documents/Software/J118/src/Output.cpp
 J118/Output.h
-/home/joseph/Software/J118/src/J118/Output.h
+C:/Users/USER/Documents/Software/J118/src/J118/Output.h
 
-/home/joseph/Software/J118/src/Thread.cpp
+C:/Users/USER/Documents/Software/J118/src/Thread.cpp
 J118/Thread.h
-/home/joseph/Software/J118/src/J118/Thread.h
+C:/Users/USER/Documents/Software/J118/src/J118/Thread.h
 
-/home/joseph/Software/J118/src/UDPServer.cpp
-
-/home/joseph/Software/J118/src/Vector2D.cpp
+C:/Users/USER/Documents/Software/J118/src/Vector2D.cpp
 J118/Vector2D.h
 -
 

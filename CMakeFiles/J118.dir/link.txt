@@ -1,2 +1,2 @@
-/usr/bin/ar qc libJ118.a  CMakeFiles/J118.dir/src/Matrix.cpp.o CMakeFiles/J118.dir/src/ArgParse.cpp.o CMakeFiles/J118.dir/src/Vector2D.cpp.o CMakeFiles/J118.dir/src/UDPServer.cpp.o CMakeFiles/J118.dir/src/Output.cpp.o CMakeFiles/J118.dir/src/Thread.cpp.o CMakeFiles/J118.dir/src/Exception.cpp.o
-/usr/bin/ranlib libJ118.a
+C:\Mingw64\mingw32\bin\ar.exe qc libJ118.a  CMakeFiles/J118.dir/src/ArgParse.cpp.obj CMakeFiles/J118.dir/src/Exception.cpp.obj CMakeFiles/J118.dir/src/Matrix.cpp.obj CMakeFiles/J118.dir/src/Output.cpp.obj CMakeFiles/J118.dir/src/Thread.cpp.obj CMakeFiles/J118.dir/src/Vector2D.cpp.obj
+C:\Mingw64\mingw32\bin\ranlib.exe libJ118.a

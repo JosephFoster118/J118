@@ -11,6 +11,7 @@ Thread::Thread()
 	thread_handle = NULL;
 	strcpy(thread_name,"Uknown");
 	running = false;
+	data_lock = new std::mutex();
 }
 
 Thread::Thread(const char* n)\
@@ -37,7 +38,7 @@ Thread::~Thread()
 	}
 	else
 	{
-		data_lock->unlock();
+		//data_lock->unlock();
 	}
 		
 	
@@ -52,7 +53,7 @@ void Thread::runProxy(void* me)
 	Thread* callee = (Thread*)me;
 	printf("Casted\n");
 	callee->running = true;
-	callee->data_lock->unlock(); // Unlocking after thread is started [ID001]
+	//callee->data_lock->unlock(); // Unlocking after thread is started [ID001]
 	callee->run();
 	//printf("POINT %x\n",((void*)callee->thread_handle));
 	//delete callee->thread_handle;
@@ -84,7 +85,7 @@ void Thread::start()
 	else
 	{
 		printf("Starting\n");
-		data_lock->lock(); //Locking to start the thread [ID001]
+		//data_lock->lock(); //Locking to start the thread [ID001]
 		thread_handle = new std::thread(runProxy,this);
 		printf("started\n");
 	}
@@ -95,7 +96,11 @@ void Thread::start()
 	
 void Thread::join()
 {
-	data_lock->lock();
+	//int result = data_lock->try_lock();
+	//printf("Try lock returned %d\n", result);
+	//pritnf("\n\n%d\n\n",(unsigned long long int)((void*)(data_lock)));
+	data_lock->lock(); //----------------------------------------CRASHES HERE------------------------------------------------
+	printf("LOCKED\n");
 	if(thread_handle != NULL && thread_handle->joinable())
 	{
 		printf("ID003\n");
