@@ -20,7 +20,7 @@
 #error "Cant determain type system, Threads failed to build!"
 #endif
 
-#define J118_THREAD_NAME_LENGTH 16
+#define J118_THREAD_NAME_LENGTH 32
 namespace J118
 {
 
@@ -37,7 +37,7 @@ class Thread
 	
 private:
 	std::thread* thread_handle;
-	std::mutex* data_lock;
+	std::mutex* thread_mutex;
 	
 	
 protected:
@@ -46,11 +46,11 @@ protected:
 	virtual void run() = 0;
 	static void runProxy(void* me);
 public:
-	~Thread();
+	virtual ~Thread();
 	Thread();
 	Thread(const char* n);
 	void start();
-	void join();
+	virtual void join();
 	
 	
 };

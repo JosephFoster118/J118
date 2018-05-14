@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/J118.dir/src/Exception.cpp.obj"
   "CMakeFiles/J118.dir/src/Matrix.cpp.obj"
   "CMakeFiles/J118.dir/src/Output.cpp.obj"
+  "CMakeFiles/J118.dir/src/PeriodicThread.cpp.obj"
   "CMakeFiles/J118.dir/src/Thread.cpp.obj"
   "CMakeFiles/J118.dir/src/Vector2D.cpp.obj"
   "libJ118.pdb"

@@ -230,6 +230,33 @@ src/Output.cpp.s:
 	$(MAKE) -f CMakeFiles\J118.dir\build.make CMakeFiles/J118.dir/src/Output.cpp.s
 .PHONY : src/Output.cpp.s
 
+src/PeriodicThread.obj: src/PeriodicThread.cpp.obj
+
+.PHONY : src/PeriodicThread.obj
+
+# target to build an object file
+src/PeriodicThread.cpp.obj:
+	$(MAKE) -f CMakeFiles\J118.dir\build.make CMakeFiles/J118.dir/src/PeriodicThread.cpp.obj
+.PHONY : src/PeriodicThread.cpp.obj
+
+src/PeriodicThread.i: src/PeriodicThread.cpp.i
+
+.PHONY : src/PeriodicThread.i
+
+# target to preprocess a source file
+src/PeriodicThread.cpp.i:
+	$(MAKE) -f CMakeFiles\J118.dir\build.make CMakeFiles/J118.dir/src/PeriodicThread.cpp.i
+.PHONY : src/PeriodicThread.cpp.i
+
+src/PeriodicThread.s: src/PeriodicThread.cpp.s
+
+.PHONY : src/PeriodicThread.s
+
+# target to generate assembly for a file
+src/PeriodicThread.cpp.s:
+	$(MAKE) -f CMakeFiles\J118.dir\build.make CMakeFiles/J118.dir/src/PeriodicThread.cpp.s
+.PHONY : src/PeriodicThread.cpp.s
+
 src/Thread.obj: src/Thread.cpp.obj
 
 .PHONY : src/Thread.obj
@@ -305,6 +332,9 @@ help:
 	@echo ... src/Output.obj
 	@echo ... src/Output.i
 	@echo ... src/Output.s
+	@echo ... src/PeriodicThread.obj
+	@echo ... src/PeriodicThread.i
+	@echo ... src/PeriodicThread.s
 	@echo ... src/Thread.obj
 	@echo ... src/Thread.i
 	@echo ... src/Thread.s

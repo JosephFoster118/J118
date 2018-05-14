@@ -14,6 +14,11 @@ CMakeFiles/J118.dir/src/Output.cpp.obj
  C:/Users/USER/Documents/Software/J118/src/Output.cpp
  include/J118/Output.h
  include/J118/UtilityMacros.h
+CMakeFiles/J118.dir/src/PeriodicThread.cpp.obj
+ C:/Users/USER/Documents/Software/J118/src/PeriodicThread.cpp
+ include/J118/PeriodicThread.h
+ include/J118/Thread.h
+ include/J118/UtilityMacros.h
 CMakeFiles/J118.dir/src/Thread.cpp.obj
  C:/Users/USER/Documents/Software/J118/src/Thread.cpp
  include/J118/Thread.h
