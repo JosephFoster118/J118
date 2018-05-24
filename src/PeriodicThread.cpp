@@ -28,17 +28,14 @@ void PeriodicThread::run()
 {
 	
 	uint64_t delta_time = (uint64_t)(thread_period*1000000000.0);
-	periodic_data_lock->lock();
+	periodic_data_lock->lock();//----------LOCK----------
 	running = true;
 	while(running)
 	{
-		periodic_data_lock->unlock();
-		//std::this_thread::sleep_for(std::chrono::milliseconds(200));
-		//printf("TICK %d\n", delta_time);
+		periodic_data_lock->unlock();//----------UNLOCK----------
 		auto start = steady_clock::now();
 		runPeriodic();
 		auto end = steady_clock::now();
-		//printf("%d\n",duration_cast<nanoseconds>(end-start).count());
 		int64_t sleep_time = delta_time - duration_cast<nanoseconds>(end-start).count();
 		if(sleep_time < 0)
 		{
@@ -49,8 +46,9 @@ void PeriodicThread::run()
 			std::this_thread::sleep_for(std::chrono::nanoseconds(sleep_time));
 		}
 		
-		periodic_data_lock->lock();
+		periodic_data_lock->lock();//----------LOCK----------
 	}
+	periodic_data_lock->unlock();//----------UNLOCK----------
 }
 
 void PeriodicThread::join()

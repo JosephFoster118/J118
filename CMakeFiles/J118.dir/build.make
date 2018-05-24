@@ -140,10 +140,24 @@ CMakeFiles/J118.dir/src/Thread.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/J118.dir/src/Thread.cpp.s"
 	C:\Mingw64\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\USER\Documents\Software\J118\src\Thread.cpp -o CMakeFiles\J118.dir\src\Thread.cpp.s
 
+CMakeFiles/J118.dir/src/UDPServer.cpp.obj: CMakeFiles/J118.dir/flags.make
+CMakeFiles/J118.dir/src/UDPServer.cpp.obj: CMakeFiles/J118.dir/includes_CXX.rsp
+CMakeFiles/J118.dir/src/UDPServer.cpp.obj: src/UDPServer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\USER\Documents\Software\J118\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/J118.dir/src/UDPServer.cpp.obj"
+	C:\Mingw64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\J118.dir\src\UDPServer.cpp.obj -c C:\Users\USER\Documents\Software\J118\src\UDPServer.cpp
+
+CMakeFiles/J118.dir/src/UDPServer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/J118.dir/src/UDPServer.cpp.i"
+	C:\Mingw64\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\USER\Documents\Software\J118\src\UDPServer.cpp > CMakeFiles\J118.dir\src\UDPServer.cpp.i
+
+CMakeFiles/J118.dir/src/UDPServer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/J118.dir/src/UDPServer.cpp.s"
+	C:\Mingw64\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\USER\Documents\Software\J118\src\UDPServer.cpp -o CMakeFiles\J118.dir\src\UDPServer.cpp.s
+
 CMakeFiles/J118.dir/src/Vector2D.cpp.obj: CMakeFiles/J118.dir/flags.make
 CMakeFiles/J118.dir/src/Vector2D.cpp.obj: CMakeFiles/J118.dir/includes_CXX.rsp
 CMakeFiles/J118.dir/src/Vector2D.cpp.obj: src/Vector2D.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\USER\Documents\Software\J118\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/J118.dir/src/Vector2D.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\USER\Documents\Software\J118\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/J118.dir/src/Vector2D.cpp.obj"
 	C:\Mingw64\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\J118.dir\src\Vector2D.cpp.obj -c C:\Users\USER\Documents\Software\J118\src\Vector2D.cpp
 
 CMakeFiles/J118.dir/src/Vector2D.cpp.i: cmake_force
@@ -162,6 +176,7 @@ J118_OBJECTS = \
 "CMakeFiles/J118.dir/src/Output.cpp.obj" \
 "CMakeFiles/J118.dir/src/PeriodicThread.cpp.obj" \
 "CMakeFiles/J118.dir/src/Thread.cpp.obj" \
+"CMakeFiles/J118.dir/src/UDPServer.cpp.obj" \
 "CMakeFiles/J118.dir/src/Vector2D.cpp.obj"
 
 # External object files for target J118
@@ -173,10 +188,11 @@ libJ118.a: CMakeFiles/J118.dir/src/Matrix.cpp.obj
 libJ118.a: CMakeFiles/J118.dir/src/Output.cpp.obj
 libJ118.a: CMakeFiles/J118.dir/src/PeriodicThread.cpp.obj
 libJ118.a: CMakeFiles/J118.dir/src/Thread.cpp.obj
+libJ118.a: CMakeFiles/J118.dir/src/UDPServer.cpp.obj
 libJ118.a: CMakeFiles/J118.dir/src/Vector2D.cpp.obj
 libJ118.a: CMakeFiles/J118.dir/build.make
 libJ118.a: CMakeFiles/J118.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\USER\Documents\Software\J118\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libJ118.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\USER\Documents\Software\J118\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX static library libJ118.a"
 	$(CMAKE_COMMAND) -P CMakeFiles\J118.dir\cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\J118.dir\link.txt --verbose=$(VERBOSE)
 

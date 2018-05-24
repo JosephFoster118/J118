@@ -23,6 +23,11 @@ CMakeFiles/J118.dir/src/Thread.cpp.obj: src/Thread.cpp
 CMakeFiles/J118.dir/src/Thread.cpp.obj: include/J118/Thread.h
 CMakeFiles/J118.dir/src/Thread.cpp.obj: include/J118/UtilityMacros.h
 
+CMakeFiles/J118.dir/src/UDPServer.cpp.obj: src/UDPServer.cpp
+CMakeFiles/J118.dir/src/UDPServer.cpp.obj: include/J118/Thread.h
+CMakeFiles/J118.dir/src/UDPServer.cpp.obj: include/J118/UDPServer.h
+CMakeFiles/J118.dir/src/UDPServer.cpp.obj: include/J118/UtilityMacros.h
+
 CMakeFiles/J118.dir/src/Vector2D.cpp.obj: src/Vector2D.cpp
 CMakeFiles/J118.dir/src/Vector2D.cpp.obj: include/J118/Vector2D.h
 

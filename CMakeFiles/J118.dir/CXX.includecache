@@ -30,6 +30,10 @@ C:/Users/USER/Documents/Software/J118/src/Thread.cpp
 J118/Thread.h
 C:/Users/USER/Documents/Software/J118/src/J118/Thread.h
 
+C:/Users/USER/Documents/Software/J118/src/UDPServer.cpp
+J118/UDPServer.h
+C:/Users/USER/Documents/Software/J118/src/J118/UDPServer.h
+
 C:/Users/USER/Documents/Software/J118/src/Vector2D.cpp
 J118/Vector2D.h
 -
@@ -101,6 +105,22 @@ J118/UtilityMacros.h
 -
 pthread.h
 -
+
+include/J118/UDPServer.h
+winsock2.h
+-
+sys/socket.h
+-
+stdio.h
+-
+string.h
+-
+stdint.h
+-
+J118/UtilityMacros.h
+include/J118/J118/UtilityMacros.h
+J118/Thread.h
+include/J118/J118/Thread.h
 
 include/J118/UtilityMacros.h
 
