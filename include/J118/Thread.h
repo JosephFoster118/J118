@@ -51,6 +51,7 @@ public:
 	Thread(const char* n);
 	void start();
 	virtual void join();
+	static void sleep(double time);
 	
 	
 };

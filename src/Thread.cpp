@@ -122,6 +122,10 @@ const char* ThreadRunningException::what() const throw()
 	return "Instance of thread already running";
 }
 
-
+void Thread::sleep(double time)
+{
+	uint64_t sleep_time = (uint64_t)(time*1000000000.0);
+	std::this_thread::sleep_for(std::chrono::nanoseconds(sleep_time));
+}
 	
 }/* namespace J118 */

@@ -11,10 +11,12 @@ elseif(${CMAKE_SYSTEM_NAME} MATCHES "Windows")
 	#add_definitions( /wd4996 )
 endif()
 
+
+
 file (GLOB SRCS "src/*.cpp")
 file (GLOB HDRS "include/${PROJECT_NAME}/*.h")
 
 include_directories(include)
 
-add_library(${PROJECT_NAME} ${HDRS} ${SRCS})
 
+add_library(${PROJECT_NAME} ${HDRS} ${SRCS})
