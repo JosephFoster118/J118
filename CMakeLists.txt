@@ -20,3 +20,5 @@ include_directories(include)
 
 
 add_library(${PROJECT_NAME} ${HDRS} ${SRCS})
+
+file(COPY ${PROJECT_NAME}.a DESTINATION ./driver)
