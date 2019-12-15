@@ -1,7 +1,7 @@
-#include "J118/Datagram.h"
+#include "J118/Packet.h"
 namespace J118
 {
-Datagram::Datagram(std::string ip_, uint16_t port_number, void* data_, size_t size_)
+Packet::Packet(std::string ip_, uint16_t port_number, void* data_, size_t size_)
 {
     ip = ip_;
     port = port_number;
@@ -10,7 +10,7 @@ Datagram::Datagram(std::string ip_, uint16_t port_number, void* data_, size_t si
     size = size_;
 }
 
-Datagram::Datagram(const Datagram &src)
+Packet::Packet(const Packet &src)
 {
     ip = src.ip;
     port = src.port;
@@ -20,7 +20,7 @@ Datagram::Datagram(const Datagram &src)
     
 }
 
-Datagram::~Datagram()
+Packet::~Packet()
 {
     if(data != nullptr)
     {
@@ -30,28 +30,28 @@ Datagram::~Datagram()
 }
 
 
-uint16_t Datagram::getPort()
+uint16_t Packet::getPort()
 {
     return port;
 }
 
 
-std::string Datagram::getIP()
+std::string Packet::getIP()
 {
     return ip;
 }
 
-uint8_t* Datagram::getData()
+uint8_t* Packet::getData()
 {
     return data;
 }
 
-void Datagram::getData(void* dst)
+void Packet::getData(void* dst)
 {
     memcpy(dst,data,size);
 }
 
-size_t Datagram::getSize()
+size_t Packet::getSize()
 {
     return size;
 }

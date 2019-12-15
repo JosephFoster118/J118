@@ -8,7 +8,7 @@
 namespace J118
 {
 
-class Datagram
+class Packet
 {
 private:
     uint16_t port;
@@ -16,9 +16,9 @@ private:
     uint8_t* data;
     size_t size;
 public:
-    Datagram(std::string ip_, uint16_t port_number, void* data_, size_t size_);
-    Datagram(const Datagram &src);
-    virtual ~Datagram();
+    Packet(std::string ip_, uint16_t port_number, void* data_, size_t size_);
+    Packet(const Packet &src);
+    virtual ~Packet();
 
     //Getters
     uint16_t getPort();
