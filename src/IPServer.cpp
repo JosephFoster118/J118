@@ -2,7 +2,7 @@
 
 namespace J118
 {
-    IPServer::IPServer(uint16_t port, std::string ip_) : Thread("UDPServer")
+    IPServer::IPServer(uint16_t port, std::string ip_) : Concurrency::Thread("UDPServer")
     {
         port_number = port;
         ip = ip_;

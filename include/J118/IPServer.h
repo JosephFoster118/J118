@@ -22,7 +22,7 @@ namespace J118
 {
 
 
-class IPServer: public J118::Thread
+class IPServer: public J118::Concurrency::Thread
 {
 private:
     uint16_t port_number;
