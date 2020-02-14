@@ -56,16 +56,17 @@ CMAKE_BINARY_DIR = /home/joseph/Software/J118
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
 
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -77,6 +78,51 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -150,32 +196,59 @@ src/ArgParse.cpp.s:
 	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/ArgParse.cpp.s
 .PHONY : src/ArgParse.cpp.s
 
-src/Datagram.o: src/Datagram.cpp.o
+src/Concurrency/PeriodicThread.o: src/Concurrency/PeriodicThread.cpp.o
 
-.PHONY : src/Datagram.o
+.PHONY : src/Concurrency/PeriodicThread.o
 
 # target to build an object file
-src/Datagram.cpp.o:
-	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Datagram.cpp.o
-.PHONY : src/Datagram.cpp.o
+src/Concurrency/PeriodicThread.cpp.o:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Concurrency/PeriodicThread.cpp.o
+.PHONY : src/Concurrency/PeriodicThread.cpp.o
 
-src/Datagram.i: src/Datagram.cpp.i
+src/Concurrency/PeriodicThread.i: src/Concurrency/PeriodicThread.cpp.i
 
-.PHONY : src/Datagram.i
+.PHONY : src/Concurrency/PeriodicThread.i
 
 # target to preprocess a source file
-src/Datagram.cpp.i:
-	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Datagram.cpp.i
-.PHONY : src/Datagram.cpp.i
+src/Concurrency/PeriodicThread.cpp.i:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Concurrency/PeriodicThread.cpp.i
+.PHONY : src/Concurrency/PeriodicThread.cpp.i
 
-src/Datagram.s: src/Datagram.cpp.s
+src/Concurrency/PeriodicThread.s: src/Concurrency/PeriodicThread.cpp.s
 
-.PHONY : src/Datagram.s
+.PHONY : src/Concurrency/PeriodicThread.s
 
 # target to generate assembly for a file
-src/Datagram.cpp.s:
-	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Datagram.cpp.s
-.PHONY : src/Datagram.cpp.s
+src/Concurrency/PeriodicThread.cpp.s:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Concurrency/PeriodicThread.cpp.s
+.PHONY : src/Concurrency/PeriodicThread.cpp.s
+
+src/Concurrency/Thread.o: src/Concurrency/Thread.cpp.o
+
+.PHONY : src/Concurrency/Thread.o
+
+# target to build an object file
+src/Concurrency/Thread.cpp.o:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Concurrency/Thread.cpp.o
+.PHONY : src/Concurrency/Thread.cpp.o
+
+src/Concurrency/Thread.i: src/Concurrency/Thread.cpp.i
+
+.PHONY : src/Concurrency/Thread.i
+
+# target to preprocess a source file
+src/Concurrency/Thread.cpp.i:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Concurrency/Thread.cpp.i
+.PHONY : src/Concurrency/Thread.cpp.i
+
+src/Concurrency/Thread.s: src/Concurrency/Thread.cpp.s
+
+.PHONY : src/Concurrency/Thread.s
+
+# target to generate assembly for a file
+src/Concurrency/Thread.cpp.s:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Concurrency/Thread.cpp.s
+.PHONY : src/Concurrency/Thread.cpp.s
 
 src/Exception.o: src/Exception.cpp.o
 
@@ -204,32 +277,32 @@ src/Exception.cpp.s:
 	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Exception.cpp.s
 .PHONY : src/Exception.cpp.s
 
-src/IPServer.o: src/IPServer.cpp.o
+src/IPCallback.o: src/IPCallback.cpp.o
 
-.PHONY : src/IPServer.o
+.PHONY : src/IPCallback.o
 
 # target to build an object file
-src/IPServer.cpp.o:
-	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/IPServer.cpp.o
-.PHONY : src/IPServer.cpp.o
+src/IPCallback.cpp.o:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/IPCallback.cpp.o
+.PHONY : src/IPCallback.cpp.o
 
-src/IPServer.i: src/IPServer.cpp.i
+src/IPCallback.i: src/IPCallback.cpp.i
 
-.PHONY : src/IPServer.i
+.PHONY : src/IPCallback.i
 
 # target to preprocess a source file
-src/IPServer.cpp.i:
-	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/IPServer.cpp.i
-.PHONY : src/IPServer.cpp.i
+src/IPCallback.cpp.i:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/IPCallback.cpp.i
+.PHONY : src/IPCallback.cpp.i
 
-src/IPServer.s: src/IPServer.cpp.s
+src/IPCallback.s: src/IPCallback.cpp.s
 
-.PHONY : src/IPServer.s
+.PHONY : src/IPCallback.s
 
 # target to generate assembly for a file
-src/IPServer.cpp.s:
-	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/IPServer.cpp.s
-.PHONY : src/IPServer.cpp.s
+src/IPCallback.cpp.s:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/IPCallback.cpp.s
+.PHONY : src/IPCallback.cpp.s
 
 src/Matrix.o: src/Matrix.cpp.o
 
@@ -285,86 +358,86 @@ src/Output.cpp.s:
 	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Output.cpp.s
 .PHONY : src/Output.cpp.s
 
-src/PeriodicThread.o: src/PeriodicThread.cpp.o
+src/Sockets/IPServer.o: src/Sockets/IPServer.cpp.o
 
-.PHONY : src/PeriodicThread.o
-
-# target to build an object file
-src/PeriodicThread.cpp.o:
-	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/PeriodicThread.cpp.o
-.PHONY : src/PeriodicThread.cpp.o
-
-src/PeriodicThread.i: src/PeriodicThread.cpp.i
-
-.PHONY : src/PeriodicThread.i
-
-# target to preprocess a source file
-src/PeriodicThread.cpp.i:
-	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/PeriodicThread.cpp.i
-.PHONY : src/PeriodicThread.cpp.i
-
-src/PeriodicThread.s: src/PeriodicThread.cpp.s
-
-.PHONY : src/PeriodicThread.s
-
-# target to generate assembly for a file
-src/PeriodicThread.cpp.s:
-	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/PeriodicThread.cpp.s
-.PHONY : src/PeriodicThread.cpp.s
-
-src/Thread.o: src/Thread.cpp.o
-
-.PHONY : src/Thread.o
+.PHONY : src/Sockets/IPServer.o
 
 # target to build an object file
-src/Thread.cpp.o:
-	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Thread.cpp.o
-.PHONY : src/Thread.cpp.o
+src/Sockets/IPServer.cpp.o:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Sockets/IPServer.cpp.o
+.PHONY : src/Sockets/IPServer.cpp.o
 
-src/Thread.i: src/Thread.cpp.i
+src/Sockets/IPServer.i: src/Sockets/IPServer.cpp.i
 
-.PHONY : src/Thread.i
+.PHONY : src/Sockets/IPServer.i
 
 # target to preprocess a source file
-src/Thread.cpp.i:
-	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Thread.cpp.i
-.PHONY : src/Thread.cpp.i
+src/Sockets/IPServer.cpp.i:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Sockets/IPServer.cpp.i
+.PHONY : src/Sockets/IPServer.cpp.i
 
-src/Thread.s: src/Thread.cpp.s
+src/Sockets/IPServer.s: src/Sockets/IPServer.cpp.s
 
-.PHONY : src/Thread.s
+.PHONY : src/Sockets/IPServer.s
 
 # target to generate assembly for a file
-src/Thread.cpp.s:
-	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Thread.cpp.s
-.PHONY : src/Thread.cpp.s
+src/Sockets/IPServer.cpp.s:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Sockets/IPServer.cpp.s
+.PHONY : src/Sockets/IPServer.cpp.s
 
-src/UDPServer.o: src/UDPServer.cpp.o
+src/Sockets/Packet.o: src/Sockets/Packet.cpp.o
 
-.PHONY : src/UDPServer.o
+.PHONY : src/Sockets/Packet.o
 
 # target to build an object file
-src/UDPServer.cpp.o:
-	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/UDPServer.cpp.o
-.PHONY : src/UDPServer.cpp.o
+src/Sockets/Packet.cpp.o:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Sockets/Packet.cpp.o
+.PHONY : src/Sockets/Packet.cpp.o
 
-src/UDPServer.i: src/UDPServer.cpp.i
+src/Sockets/Packet.i: src/Sockets/Packet.cpp.i
 
-.PHONY : src/UDPServer.i
+.PHONY : src/Sockets/Packet.i
 
 # target to preprocess a source file
-src/UDPServer.cpp.i:
-	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/UDPServer.cpp.i
-.PHONY : src/UDPServer.cpp.i
+src/Sockets/Packet.cpp.i:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Sockets/Packet.cpp.i
+.PHONY : src/Sockets/Packet.cpp.i
 
-src/UDPServer.s: src/UDPServer.cpp.s
+src/Sockets/Packet.s: src/Sockets/Packet.cpp.s
 
-.PHONY : src/UDPServer.s
+.PHONY : src/Sockets/Packet.s
 
 # target to generate assembly for a file
-src/UDPServer.cpp.s:
-	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/UDPServer.cpp.s
-.PHONY : src/UDPServer.cpp.s
+src/Sockets/Packet.cpp.s:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Sockets/Packet.cpp.s
+.PHONY : src/Sockets/Packet.cpp.s
+
+src/Sockets/UDPServer.o: src/Sockets/UDPServer.cpp.o
+
+.PHONY : src/Sockets/UDPServer.o
+
+# target to build an object file
+src/Sockets/UDPServer.cpp.o:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Sockets/UDPServer.cpp.o
+.PHONY : src/Sockets/UDPServer.cpp.o
+
+src/Sockets/UDPServer.i: src/Sockets/UDPServer.cpp.i
+
+.PHONY : src/Sockets/UDPServer.i
+
+# target to preprocess a source file
+src/Sockets/UDPServer.cpp.i:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Sockets/UDPServer.cpp.i
+.PHONY : src/Sockets/UDPServer.cpp.i
+
+src/Sockets/UDPServer.s: src/Sockets/UDPServer.cpp.s
+
+.PHONY : src/Sockets/UDPServer.s
+
+# target to generate assembly for a file
+src/Sockets/UDPServer.cpp.s:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Sockets/UDPServer.cpp.s
+.PHONY : src/Sockets/UDPServer.cpp.s
 
 src/Vector2D.o: src/Vector2D.cpp.o
 
@@ -399,36 +472,43 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
-	@echo "... J118"
+	@echo "... install/strip"
 	@echo "... edit_cache"
+	@echo "... J118"
+	@echo "... rebuild_cache"
+	@echo "... list_install_components"
+	@echo "... install/local"
+	@echo "... install"
 	@echo "... src/ArgParse.o"
 	@echo "... src/ArgParse.i"
 	@echo "... src/ArgParse.s"
-	@echo "... src/Datagram.o"
-	@echo "... src/Datagram.i"
-	@echo "... src/Datagram.s"
+	@echo "... src/Concurrency/PeriodicThread.o"
+	@echo "... src/Concurrency/PeriodicThread.i"
+	@echo "... src/Concurrency/PeriodicThread.s"
+	@echo "... src/Concurrency/Thread.o"
+	@echo "... src/Concurrency/Thread.i"
+	@echo "... src/Concurrency/Thread.s"
 	@echo "... src/Exception.o"
 	@echo "... src/Exception.i"
 	@echo "... src/Exception.s"
-	@echo "... src/IPServer.o"
-	@echo "... src/IPServer.i"
-	@echo "... src/IPServer.s"
+	@echo "... src/IPCallback.o"
+	@echo "... src/IPCallback.i"
+	@echo "... src/IPCallback.s"
 	@echo "... src/Matrix.o"
 	@echo "... src/Matrix.i"
 	@echo "... src/Matrix.s"
 	@echo "... src/Output.o"
 	@echo "... src/Output.i"
 	@echo "... src/Output.s"
-	@echo "... src/PeriodicThread.o"
-	@echo "... src/PeriodicThread.i"
-	@echo "... src/PeriodicThread.s"
-	@echo "... src/Thread.o"
-	@echo "... src/Thread.i"
-	@echo "... src/Thread.s"
-	@echo "... src/UDPServer.o"
-	@echo "... src/UDPServer.i"
-	@echo "... src/UDPServer.s"
+	@echo "... src/Sockets/IPServer.o"
+	@echo "... src/Sockets/IPServer.i"
+	@echo "... src/Sockets/IPServer.s"
+	@echo "... src/Sockets/Packet.o"
+	@echo "... src/Sockets/Packet.i"
+	@echo "... src/Sockets/Packet.s"
+	@echo "... src/Sockets/UDPServer.o"
+	@echo "... src/Sockets/UDPServer.i"
+	@echo "... src/Sockets/UDPServer.s"
 	@echo "... src/Vector2D.o"
 	@echo "... src/Vector2D.i"
 	@echo "... src/Vector2D.s"

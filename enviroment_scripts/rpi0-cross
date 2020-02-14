@@ -1,0 +1,23 @@
+#!/bin/bash
+SESSION=$USER
+
+DEVELOPMENT_WINDOW=1
+
+. SetUpRaspPiZeroEnv
+
+tmux -2 new-session -d -s $SESSION
+
+# Setup a window for tailing log files
+
+tmux new-window -t $SESSION:$DEVELOPMENT_WINDOW -n 'Development'
+
+
+
+
+
+
+# Set default window
+tmux select-window -t $SESSION:$DEVELOPMENT_WINDOW
+
+# Attach to session
+tmux -2 attach-session -t $SESSION

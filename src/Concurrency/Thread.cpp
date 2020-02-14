@@ -5,6 +5,10 @@
 //TODO: Fix crash when deleting right after creation.
 namespace J118
 {
+namespace Concurrency
+{
+
+
 	
 Thread::Thread()
 {
@@ -117,5 +121,6 @@ void Thread::sleep(double time)
 	uint64_t sleep_time = (uint64_t)(time*1000000000.0);
 	std::this_thread::sleep_for(std::chrono::nanoseconds(sleep_time));
 }
-	
+
+}
 }/* namespace J118 */

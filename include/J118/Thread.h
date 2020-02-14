@@ -23,6 +23,8 @@
 #define J118_THREAD_NAME_LENGTH 32
 namespace J118
 {
+namespace Concurrency
+{
 
 class ThreadRunningException: public std::exception
 {
@@ -55,5 +57,7 @@ public:
 	
 	
 };
+
+} /*namespace Concurrency*/
 } /*namespace J118 */
 

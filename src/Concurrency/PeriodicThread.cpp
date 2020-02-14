@@ -3,7 +3,8 @@
 
 namespace J118
 {
-
+namespace Concurrency
+{
 using namespace std::chrono;
 PeriodicThread::PeriodicThread(double period) : Thread("Unknown Periodic")
 {
@@ -63,7 +64,8 @@ void PeriodicThread::join()
 	
 	
 }
-	
+
+}
 }
 
 

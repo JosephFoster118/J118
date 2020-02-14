@@ -5,7 +5,8 @@
 
 namespace J118
 {
-
+namespace Concurrency
+{
 class PeriodicThread : public Thread
 {
 private:
@@ -23,4 +24,5 @@ public:
 
 };
 
+}
 }// J118 Namespace
