@@ -23,7 +23,7 @@ elseif(${CMAKE_SYSTEM_NAME} MATCHES "Windows")
 	#add_definitions( /wd4996 )
 endif()
 
-file (GLOB SRCS "src/*.cpp" "src/Concurrency/*.cpp" "src/Sockets/*.cpp")
+file (GLOB SRCS "src/*.cpp" "src/Concurrency/*.cpp" "src/Device/*.cpp" "src/Sockets/*.cpp")
 file (GLOB HDRS "include/${PROJECT_NAME}/*.h")
 aux_source_directory(include/${PROJECT_NAME}/ J118_HEADERS)
 

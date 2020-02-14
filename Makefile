@@ -250,6 +250,33 @@ src/Concurrency/Thread.cpp.s:
 	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Concurrency/Thread.cpp.s
 .PHONY : src/Concurrency/Thread.cpp.s
 
+src/Device/Device.o: src/Device/Device.cpp.o
+
+.PHONY : src/Device/Device.o
+
+# target to build an object file
+src/Device/Device.cpp.o:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Device/Device.cpp.o
+.PHONY : src/Device/Device.cpp.o
+
+src/Device/Device.i: src/Device/Device.cpp.i
+
+.PHONY : src/Device/Device.i
+
+# target to preprocess a source file
+src/Device/Device.cpp.i:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Device/Device.cpp.i
+.PHONY : src/Device/Device.cpp.i
+
+src/Device/Device.s: src/Device/Device.cpp.s
+
+.PHONY : src/Device/Device.s
+
+# target to generate assembly for a file
+src/Device/Device.cpp.s:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Device/Device.cpp.s
+.PHONY : src/Device/Device.cpp.s
+
 src/Exception.o: src/Exception.cpp.o
 
 .PHONY : src/Exception.o
@@ -303,33 +330,6 @@ src/IPCallback.s: src/IPCallback.cpp.s
 src/IPCallback.cpp.s:
 	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/IPCallback.cpp.s
 .PHONY : src/IPCallback.cpp.s
-
-src/Matrix.o: src/Matrix.cpp.o
-
-.PHONY : src/Matrix.o
-
-# target to build an object file
-src/Matrix.cpp.o:
-	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Matrix.cpp.o
-.PHONY : src/Matrix.cpp.o
-
-src/Matrix.i: src/Matrix.cpp.i
-
-.PHONY : src/Matrix.i
-
-# target to preprocess a source file
-src/Matrix.cpp.i:
-	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Matrix.cpp.i
-.PHONY : src/Matrix.cpp.i
-
-src/Matrix.s: src/Matrix.cpp.s
-
-.PHONY : src/Matrix.s
-
-# target to generate assembly for a file
-src/Matrix.cpp.s:
-	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Matrix.cpp.s
-.PHONY : src/Matrix.cpp.s
 
 src/Output.o: src/Output.cpp.o
 
@@ -439,33 +439,6 @@ src/Sockets/UDPServer.cpp.s:
 	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Sockets/UDPServer.cpp.s
 .PHONY : src/Sockets/UDPServer.cpp.s
 
-src/Vector2D.o: src/Vector2D.cpp.o
-
-.PHONY : src/Vector2D.o
-
-# target to build an object file
-src/Vector2D.cpp.o:
-	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Vector2D.cpp.o
-.PHONY : src/Vector2D.cpp.o
-
-src/Vector2D.i: src/Vector2D.cpp.i
-
-.PHONY : src/Vector2D.i
-
-# target to preprocess a source file
-src/Vector2D.cpp.i:
-	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Vector2D.cpp.i
-.PHONY : src/Vector2D.cpp.i
-
-src/Vector2D.s: src/Vector2D.cpp.s
-
-.PHONY : src/Vector2D.s
-
-# target to generate assembly for a file
-src/Vector2D.cpp.s:
-	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Vector2D.cpp.s
-.PHONY : src/Vector2D.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -488,15 +461,15 @@ help:
 	@echo "... src/Concurrency/Thread.o"
 	@echo "... src/Concurrency/Thread.i"
 	@echo "... src/Concurrency/Thread.s"
+	@echo "... src/Device/Device.o"
+	@echo "... src/Device/Device.i"
+	@echo "... src/Device/Device.s"
 	@echo "... src/Exception.o"
 	@echo "... src/Exception.i"
 	@echo "... src/Exception.s"
 	@echo "... src/IPCallback.o"
 	@echo "... src/IPCallback.i"
 	@echo "... src/IPCallback.s"
-	@echo "... src/Matrix.o"
-	@echo "... src/Matrix.i"
-	@echo "... src/Matrix.s"
 	@echo "... src/Output.o"
 	@echo "... src/Output.i"
 	@echo "... src/Output.s"
@@ -509,9 +482,6 @@ help:
 	@echo "... src/Sockets/UDPServer.o"
 	@echo "... src/Sockets/UDPServer.i"
 	@echo "... src/Sockets/UDPServer.s"
-	@echo "... src/Vector2D.o"
-	@echo "... src/Vector2D.i"
-	@echo "... src/Vector2D.s"
 .PHONY : help
 
 
