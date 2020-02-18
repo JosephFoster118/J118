@@ -3,6 +3,8 @@ SESSION=$USER
 
 DEVELOPMENT_WINDOW=1
 
+REMOTE_WINDOW=2
+
 . SetUpRaspPiZeroEnv
 
 tmux -2 new-session -d -s $SESSION
@@ -12,7 +14,8 @@ tmux -2 new-session -d -s $SESSION
 tmux new-window -t $SESSION:$DEVELOPMENT_WINDOW -n 'Development'
 
 
-
+tmux new-window -t $SESSION:$REMOTE_WINDOW -n 'Remote'
+tmux send-keys "sshpass -p '00512546' ssh pi@192.168.0.122" c-m
 
 
 
