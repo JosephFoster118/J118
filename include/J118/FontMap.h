@@ -15,12 +15,12 @@ namespace J118
 class FontMapLetter
 {
 public:
-    size_t DATA_SIZE = 20480;
+    size_t DATA_SIZE = 16384;
 private:
     uint16_t width;
     uint16_t height;
-    uint8_t data[20480];
-    uint8_t buffer[20480] ;
+    uint8_t data[16384];
+    uint8_t buffer[16384] ;
 public:
     FontMapLetter(std::string font, char letter);
     FontMapLetter(const FontMapLetter &obj);

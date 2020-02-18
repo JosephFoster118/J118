@@ -277,6 +277,33 @@ src/Exception.cpp.s:
 	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Exception.cpp.s
 .PHONY : src/Exception.cpp.s
 
+src/Graphics/Canvas.o: src/Graphics/Canvas.cpp.o
+
+.PHONY : src/Graphics/Canvas.o
+
+# target to build an object file
+src/Graphics/Canvas.cpp.o:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Graphics/Canvas.cpp.o
+.PHONY : src/Graphics/Canvas.cpp.o
+
+src/Graphics/Canvas.i: src/Graphics/Canvas.cpp.i
+
+.PHONY : src/Graphics/Canvas.i
+
+# target to preprocess a source file
+src/Graphics/Canvas.cpp.i:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Graphics/Canvas.cpp.i
+.PHONY : src/Graphics/Canvas.cpp.i
+
+src/Graphics/Canvas.s: src/Graphics/Canvas.cpp.s
+
+.PHONY : src/Graphics/Canvas.s
+
+# target to generate assembly for a file
+src/Graphics/Canvas.cpp.s:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Graphics/Canvas.cpp.s
+.PHONY : src/Graphics/Canvas.cpp.s
+
 src/Graphics/Color.o: src/Graphics/Color.cpp.o
 
 .PHONY : src/Graphics/Color.o
@@ -358,6 +385,87 @@ src/IPCallback.cpp.s:
 	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/IPCallback.cpp.s
 .PHONY : src/IPCallback.cpp.s
 
+src/Math/Matrix.o: src/Math/Matrix.cpp.o
+
+.PHONY : src/Math/Matrix.o
+
+# target to build an object file
+src/Math/Matrix.cpp.o:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Math/Matrix.cpp.o
+.PHONY : src/Math/Matrix.cpp.o
+
+src/Math/Matrix.i: src/Math/Matrix.cpp.i
+
+.PHONY : src/Math/Matrix.i
+
+# target to preprocess a source file
+src/Math/Matrix.cpp.i:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Math/Matrix.cpp.i
+.PHONY : src/Math/Matrix.cpp.i
+
+src/Math/Matrix.s: src/Math/Matrix.cpp.s
+
+.PHONY : src/Math/Matrix.s
+
+# target to generate assembly for a file
+src/Math/Matrix.cpp.s:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Math/Matrix.cpp.s
+.PHONY : src/Math/Matrix.cpp.s
+
+src/Math/Point2D.o: src/Math/Point2D.cpp.o
+
+.PHONY : src/Math/Point2D.o
+
+# target to build an object file
+src/Math/Point2D.cpp.o:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Math/Point2D.cpp.o
+.PHONY : src/Math/Point2D.cpp.o
+
+src/Math/Point2D.i: src/Math/Point2D.cpp.i
+
+.PHONY : src/Math/Point2D.i
+
+# target to preprocess a source file
+src/Math/Point2D.cpp.i:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Math/Point2D.cpp.i
+.PHONY : src/Math/Point2D.cpp.i
+
+src/Math/Point2D.s: src/Math/Point2D.cpp.s
+
+.PHONY : src/Math/Point2D.s
+
+# target to generate assembly for a file
+src/Math/Point2D.cpp.s:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Math/Point2D.cpp.s
+.PHONY : src/Math/Point2D.cpp.s
+
+src/Math/Vector2D.o: src/Math/Vector2D.cpp.o
+
+.PHONY : src/Math/Vector2D.o
+
+# target to build an object file
+src/Math/Vector2D.cpp.o:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Math/Vector2D.cpp.o
+.PHONY : src/Math/Vector2D.cpp.o
+
+src/Math/Vector2D.i: src/Math/Vector2D.cpp.i
+
+.PHONY : src/Math/Vector2D.i
+
+# target to preprocess a source file
+src/Math/Vector2D.cpp.i:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Math/Vector2D.cpp.i
+.PHONY : src/Math/Vector2D.cpp.i
+
+src/Math/Vector2D.s: src/Math/Vector2D.cpp.s
+
+.PHONY : src/Math/Vector2D.s
+
+# target to generate assembly for a file
+src/Math/Vector2D.cpp.s:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Math/Vector2D.cpp.s
+.PHONY : src/Math/Vector2D.cpp.s
+
 src/Output.o: src/Output.cpp.o
 
 .PHONY : src/Output.o
@@ -410,6 +518,9 @@ help:
 	@echo "... src/Exception.o"
 	@echo "... src/Exception.i"
 	@echo "... src/Exception.s"
+	@echo "... src/Graphics/Canvas.o"
+	@echo "... src/Graphics/Canvas.i"
+	@echo "... src/Graphics/Canvas.s"
 	@echo "... src/Graphics/Color.o"
 	@echo "... src/Graphics/Color.i"
 	@echo "... src/Graphics/Color.s"
@@ -419,6 +530,15 @@ help:
 	@echo "... src/IPCallback.o"
 	@echo "... src/IPCallback.i"
 	@echo "... src/IPCallback.s"
+	@echo "... src/Math/Matrix.o"
+	@echo "... src/Math/Matrix.i"
+	@echo "... src/Math/Matrix.s"
+	@echo "... src/Math/Point2D.o"
+	@echo "... src/Math/Point2D.i"
+	@echo "... src/Math/Point2D.s"
+	@echo "... src/Math/Vector2D.o"
+	@echo "... src/Math/Vector2D.i"
+	@echo "... src/Math/Vector2D.s"
 	@echo "... src/Output.o"
 	@echo "... src/Output.i"
 	@echo "... src/Output.s"
