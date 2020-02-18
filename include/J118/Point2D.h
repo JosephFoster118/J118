@@ -7,7 +7,7 @@ namespace J118
 
 template <class T>
 using Coordinate2D = std::pair<T,T> ;
-
+//TODO: Add copy constructor 
 
 template <class T>
 class Point2D
