@@ -277,6 +277,60 @@ src/Exception.cpp.s:
 	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Exception.cpp.s
 .PHONY : src/Exception.cpp.s
 
+src/Graphics/Color.o: src/Graphics/Color.cpp.o
+
+.PHONY : src/Graphics/Color.o
+
+# target to build an object file
+src/Graphics/Color.cpp.o:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Graphics/Color.cpp.o
+.PHONY : src/Graphics/Color.cpp.o
+
+src/Graphics/Color.i: src/Graphics/Color.cpp.i
+
+.PHONY : src/Graphics/Color.i
+
+# target to preprocess a source file
+src/Graphics/Color.cpp.i:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Graphics/Color.cpp.i
+.PHONY : src/Graphics/Color.cpp.i
+
+src/Graphics/Color.s: src/Graphics/Color.cpp.s
+
+.PHONY : src/Graphics/Color.s
+
+# target to generate assembly for a file
+src/Graphics/Color.cpp.s:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Graphics/Color.cpp.s
+.PHONY : src/Graphics/Color.cpp.s
+
+src/Graphics/FontMap.o: src/Graphics/FontMap.cpp.o
+
+.PHONY : src/Graphics/FontMap.o
+
+# target to build an object file
+src/Graphics/FontMap.cpp.o:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Graphics/FontMap.cpp.o
+.PHONY : src/Graphics/FontMap.cpp.o
+
+src/Graphics/FontMap.i: src/Graphics/FontMap.cpp.i
+
+.PHONY : src/Graphics/FontMap.i
+
+# target to preprocess a source file
+src/Graphics/FontMap.cpp.i:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Graphics/FontMap.cpp.i
+.PHONY : src/Graphics/FontMap.cpp.i
+
+src/Graphics/FontMap.s: src/Graphics/FontMap.cpp.s
+
+.PHONY : src/Graphics/FontMap.s
+
+# target to generate assembly for a file
+src/Graphics/FontMap.cpp.s:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Graphics/FontMap.cpp.s
+.PHONY : src/Graphics/FontMap.cpp.s
+
 src/IPCallback.o: src/IPCallback.cpp.o
 
 .PHONY : src/IPCallback.o
@@ -303,33 +357,6 @@ src/IPCallback.s: src/IPCallback.cpp.s
 src/IPCallback.cpp.s:
 	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/IPCallback.cpp.s
 .PHONY : src/IPCallback.cpp.s
-
-src/Matrix.o: src/Matrix.cpp.o
-
-.PHONY : src/Matrix.o
-
-# target to build an object file
-src/Matrix.cpp.o:
-	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Matrix.cpp.o
-.PHONY : src/Matrix.cpp.o
-
-src/Matrix.i: src/Matrix.cpp.i
-
-.PHONY : src/Matrix.i
-
-# target to preprocess a source file
-src/Matrix.cpp.i:
-	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Matrix.cpp.i
-.PHONY : src/Matrix.cpp.i
-
-src/Matrix.s: src/Matrix.cpp.s
-
-.PHONY : src/Matrix.s
-
-# target to generate assembly for a file
-src/Matrix.cpp.s:
-	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Matrix.cpp.s
-.PHONY : src/Matrix.cpp.s
 
 src/Output.o: src/Output.cpp.o
 
@@ -358,114 +385,6 @@ src/Output.cpp.s:
 	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Output.cpp.s
 .PHONY : src/Output.cpp.s
 
-src/Sockets/IPServer.o: src/Sockets/IPServer.cpp.o
-
-.PHONY : src/Sockets/IPServer.o
-
-# target to build an object file
-src/Sockets/IPServer.cpp.o:
-	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Sockets/IPServer.cpp.o
-.PHONY : src/Sockets/IPServer.cpp.o
-
-src/Sockets/IPServer.i: src/Sockets/IPServer.cpp.i
-
-.PHONY : src/Sockets/IPServer.i
-
-# target to preprocess a source file
-src/Sockets/IPServer.cpp.i:
-	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Sockets/IPServer.cpp.i
-.PHONY : src/Sockets/IPServer.cpp.i
-
-src/Sockets/IPServer.s: src/Sockets/IPServer.cpp.s
-
-.PHONY : src/Sockets/IPServer.s
-
-# target to generate assembly for a file
-src/Sockets/IPServer.cpp.s:
-	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Sockets/IPServer.cpp.s
-.PHONY : src/Sockets/IPServer.cpp.s
-
-src/Sockets/Packet.o: src/Sockets/Packet.cpp.o
-
-.PHONY : src/Sockets/Packet.o
-
-# target to build an object file
-src/Sockets/Packet.cpp.o:
-	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Sockets/Packet.cpp.o
-.PHONY : src/Sockets/Packet.cpp.o
-
-src/Sockets/Packet.i: src/Sockets/Packet.cpp.i
-
-.PHONY : src/Sockets/Packet.i
-
-# target to preprocess a source file
-src/Sockets/Packet.cpp.i:
-	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Sockets/Packet.cpp.i
-.PHONY : src/Sockets/Packet.cpp.i
-
-src/Sockets/Packet.s: src/Sockets/Packet.cpp.s
-
-.PHONY : src/Sockets/Packet.s
-
-# target to generate assembly for a file
-src/Sockets/Packet.cpp.s:
-	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Sockets/Packet.cpp.s
-.PHONY : src/Sockets/Packet.cpp.s
-
-src/Sockets/UDPServer.o: src/Sockets/UDPServer.cpp.o
-
-.PHONY : src/Sockets/UDPServer.o
-
-# target to build an object file
-src/Sockets/UDPServer.cpp.o:
-	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Sockets/UDPServer.cpp.o
-.PHONY : src/Sockets/UDPServer.cpp.o
-
-src/Sockets/UDPServer.i: src/Sockets/UDPServer.cpp.i
-
-.PHONY : src/Sockets/UDPServer.i
-
-# target to preprocess a source file
-src/Sockets/UDPServer.cpp.i:
-	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Sockets/UDPServer.cpp.i
-.PHONY : src/Sockets/UDPServer.cpp.i
-
-src/Sockets/UDPServer.s: src/Sockets/UDPServer.cpp.s
-
-.PHONY : src/Sockets/UDPServer.s
-
-# target to generate assembly for a file
-src/Sockets/UDPServer.cpp.s:
-	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Sockets/UDPServer.cpp.s
-.PHONY : src/Sockets/UDPServer.cpp.s
-
-src/Vector2D.o: src/Vector2D.cpp.o
-
-.PHONY : src/Vector2D.o
-
-# target to build an object file
-src/Vector2D.cpp.o:
-	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Vector2D.cpp.o
-.PHONY : src/Vector2D.cpp.o
-
-src/Vector2D.i: src/Vector2D.cpp.i
-
-.PHONY : src/Vector2D.i
-
-# target to preprocess a source file
-src/Vector2D.cpp.i:
-	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Vector2D.cpp.i
-.PHONY : src/Vector2D.cpp.i
-
-src/Vector2D.s: src/Vector2D.cpp.s
-
-.PHONY : src/Vector2D.s
-
-# target to generate assembly for a file
-src/Vector2D.cpp.s:
-	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Vector2D.cpp.s
-.PHONY : src/Vector2D.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -491,27 +410,18 @@ help:
 	@echo "... src/Exception.o"
 	@echo "... src/Exception.i"
 	@echo "... src/Exception.s"
+	@echo "... src/Graphics/Color.o"
+	@echo "... src/Graphics/Color.i"
+	@echo "... src/Graphics/Color.s"
+	@echo "... src/Graphics/FontMap.o"
+	@echo "... src/Graphics/FontMap.i"
+	@echo "... src/Graphics/FontMap.s"
 	@echo "... src/IPCallback.o"
 	@echo "... src/IPCallback.i"
 	@echo "... src/IPCallback.s"
-	@echo "... src/Matrix.o"
-	@echo "... src/Matrix.i"
-	@echo "... src/Matrix.s"
 	@echo "... src/Output.o"
 	@echo "... src/Output.i"
 	@echo "... src/Output.s"
-	@echo "... src/Sockets/IPServer.o"
-	@echo "... src/Sockets/IPServer.i"
-	@echo "... src/Sockets/IPServer.s"
-	@echo "... src/Sockets/Packet.o"
-	@echo "... src/Sockets/Packet.i"
-	@echo "... src/Sockets/Packet.s"
-	@echo "... src/Sockets/UDPServer.o"
-	@echo "... src/Sockets/UDPServer.i"
-	@echo "... src/Sockets/UDPServer.s"
-	@echo "... src/Vector2D.o"
-	@echo "... src/Vector2D.i"
-	@echo "... src/Vector2D.s"
 .PHONY : help
 
 
