@@ -16,7 +16,7 @@ public:
 
     void copyTo656TFT(uint16_t* tft_memory);
 
-    void drawLine(Point2D<uint32_t>, Color())
+    void drawLine(Point2D<uint32_t>, Color color);
 
 private:
     Color*** data;

@@ -19,7 +19,7 @@ namespace J118
         long VerticalResolution;
         long Colors;
         long ImportantColors;
-    }header;
+    };
 using namespace std;
 FontMapLetter::FontMapLetter(std::string font, char letter)
 {
