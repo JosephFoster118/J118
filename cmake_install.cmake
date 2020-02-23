@@ -39,26 +39,26 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/joseph/Software/cross-pi-gcc-9.2.0-0/lib/libJ118.a")
+   "/home/joseph/Software/cross-pi-gcc-8.3.0-0/lib/libJ118.a")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/joseph/Software/cross-pi-gcc-9.2.0-0/lib" TYPE STATIC_LIBRARY FILES "/home/joseph/Software/J118/libJ118.a")
+file(INSTALL DESTINATION "/home/joseph/Software/cross-pi-gcc-8.3.0-0/lib" TYPE STATIC_LIBRARY FILES "/home/joseph/Software/J118/libJ118.a")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/joseph/Software/cross-pi-gcc-9.2.0-0/include/J118/ArgParse.h;/home/joseph/Software/cross-pi-gcc-9.2.0-0/include/J118/Callback.h;/home/joseph/Software/cross-pi-gcc-9.2.0-0/include/J118/Canvas.h;/home/joseph/Software/cross-pi-gcc-9.2.0-0/include/J118/Color.h;/home/joseph/Software/cross-pi-gcc-9.2.0-0/include/J118/Exception.h;/home/joseph/Software/cross-pi-gcc-9.2.0-0/include/J118/FontMap.h;/home/joseph/Software/cross-pi-gcc-9.2.0-0/include/J118/IPCallback.h;/home/joseph/Software/cross-pi-gcc-9.2.0-0/include/J118/IPServer.h;/home/joseph/Software/cross-pi-gcc-9.2.0-0/include/J118/Matrix.h;/home/joseph/Software/cross-pi-gcc-9.2.0-0/include/J118/Output.h;/home/joseph/Software/cross-pi-gcc-9.2.0-0/include/J118/Packet.h;/home/joseph/Software/cross-pi-gcc-9.2.0-0/include/J118/PeriodicThread.h;/home/joseph/Software/cross-pi-gcc-9.2.0-0/include/J118/Point2D.h;/home/joseph/Software/cross-pi-gcc-9.2.0-0/include/J118/Thread.h;/home/joseph/Software/cross-pi-gcc-9.2.0-0/include/J118/UDPServer.h;/home/joseph/Software/cross-pi-gcc-9.2.0-0/include/J118/UtilityMacros.h;/home/joseph/Software/cross-pi-gcc-9.2.0-0/include/J118/Vector2D.h")
+   "/home/joseph/Software/cross-pi-gcc-8.3.0-0/include/J118/ArgParse.h;/home/joseph/Software/cross-pi-gcc-8.3.0-0/include/J118/Callback.h;/home/joseph/Software/cross-pi-gcc-8.3.0-0/include/J118/Canvas.h;/home/joseph/Software/cross-pi-gcc-8.3.0-0/include/J118/Color.h;/home/joseph/Software/cross-pi-gcc-8.3.0-0/include/J118/Exception.h;/home/joseph/Software/cross-pi-gcc-8.3.0-0/include/J118/FontMap.h;/home/joseph/Software/cross-pi-gcc-8.3.0-0/include/J118/IPCallback.h;/home/joseph/Software/cross-pi-gcc-8.3.0-0/include/J118/IPServer.h;/home/joseph/Software/cross-pi-gcc-8.3.0-0/include/J118/Matrix.h;/home/joseph/Software/cross-pi-gcc-8.3.0-0/include/J118/Output.h;/home/joseph/Software/cross-pi-gcc-8.3.0-0/include/J118/Packet.h;/home/joseph/Software/cross-pi-gcc-8.3.0-0/include/J118/PeriodicThread.h;/home/joseph/Software/cross-pi-gcc-8.3.0-0/include/J118/Point2D.h;/home/joseph/Software/cross-pi-gcc-8.3.0-0/include/J118/Polygon.h;/home/joseph/Software/cross-pi-gcc-8.3.0-0/include/J118/Thread.h;/home/joseph/Software/cross-pi-gcc-8.3.0-0/include/J118/UDPServer.h;/home/joseph/Software/cross-pi-gcc-8.3.0-0/include/J118/UtilityMacros.h;/home/joseph/Software/cross-pi-gcc-8.3.0-0/include/J118/Vector2D.h")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/joseph/Software/cross-pi-gcc-9.2.0-0/include/J118" TYPE FILE FILES
+file(INSTALL DESTINATION "/home/joseph/Software/cross-pi-gcc-8.3.0-0/include/J118" TYPE FILE FILES
     "/home/joseph/Software/J118/include/J118/ArgParse.h"
     "/home/joseph/Software/J118/include/J118/Callback.h"
     "/home/joseph/Software/J118/include/J118/Canvas.h"
@@ -72,6 +72,7 @@ file(INSTALL DESTINATION "/home/joseph/Software/cross-pi-gcc-9.2.0-0/include/J11
     "/home/joseph/Software/J118/include/J118/Packet.h"
     "/home/joseph/Software/J118/include/J118/PeriodicThread.h"
     "/home/joseph/Software/J118/include/J118/Point2D.h"
+    "/home/joseph/Software/J118/include/J118/Polygon.h"
     "/home/joseph/Software/J118/include/J118/Thread.h"
     "/home/joseph/Software/J118/include/J118/UDPServer.h"
     "/home/joseph/Software/J118/include/J118/UtilityMacros.h"

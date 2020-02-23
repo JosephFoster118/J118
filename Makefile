@@ -439,6 +439,33 @@ src/Math/Point2D.cpp.s:
 	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Math/Point2D.cpp.s
 .PHONY : src/Math/Point2D.cpp.s
 
+src/Math/Polygon.o: src/Math/Polygon.cpp.o
+
+.PHONY : src/Math/Polygon.o
+
+# target to build an object file
+src/Math/Polygon.cpp.o:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Math/Polygon.cpp.o
+.PHONY : src/Math/Polygon.cpp.o
+
+src/Math/Polygon.i: src/Math/Polygon.cpp.i
+
+.PHONY : src/Math/Polygon.i
+
+# target to preprocess a source file
+src/Math/Polygon.cpp.i:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Math/Polygon.cpp.i
+.PHONY : src/Math/Polygon.cpp.i
+
+src/Math/Polygon.s: src/Math/Polygon.cpp.s
+
+.PHONY : src/Math/Polygon.s
+
+# target to generate assembly for a file
+src/Math/Polygon.cpp.s:
+	$(MAKE) -f CMakeFiles/J118.dir/build.make CMakeFiles/J118.dir/src/Math/Polygon.cpp.s
+.PHONY : src/Math/Polygon.cpp.s
+
 src/Math/Vector2D.o: src/Math/Vector2D.cpp.o
 
 .PHONY : src/Math/Vector2D.o
@@ -536,6 +563,9 @@ help:
 	@echo "... src/Math/Point2D.o"
 	@echo "... src/Math/Point2D.i"
 	@echo "... src/Math/Point2D.s"
+	@echo "... src/Math/Polygon.o"
+	@echo "... src/Math/Polygon.i"
+	@echo "... src/Math/Polygon.s"
 	@echo "... src/Math/Vector2D.o"
 	@echo "... src/Math/Vector2D.i"
 	@echo "... src/Math/Vector2D.s"

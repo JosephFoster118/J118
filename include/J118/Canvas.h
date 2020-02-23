@@ -1,6 +1,7 @@
 #pragma once
 #include "J118/Color.h"
 #include "J118/Point2D.h"
+#include <J118/Polygon.h>
 #include <stdint.h>
 
 namespace J118
@@ -17,6 +18,7 @@ public:
     void copyTo656TFT(uint16_t* tft_memory);
 
     void drawLine(Point2D<uint32_t>, Color color);
+    void drawPolygon(Polygon polygon,Color color = Color::White);
 
 private:
     Color*** data;
