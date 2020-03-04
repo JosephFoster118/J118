@@ -1,4 +1,4 @@
-# Install script for directory: /home/joseph/Software/J118
+# Install script for directory: /home/pi/Software/J118
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,44 +39,43 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/joseph/Software/cross-pi-gcc-8.3.0-0/lib/libJ118.a")
+   "/usr/lib/libJ118.a")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/joseph/Software/cross-pi-gcc-8.3.0-0/lib" TYPE STATIC_LIBRARY FILES "/home/joseph/Software/J118/libJ118.a")
+file(INSTALL DESTINATION "/usr/lib" TYPE STATIC_LIBRARY FILES "/home/pi/Software/J118/libJ118.a")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/joseph/Software/cross-pi-gcc-8.3.0-0/include/J118/ArgParse.h;/home/joseph/Software/cross-pi-gcc-8.3.0-0/include/J118/Callback.h;/home/joseph/Software/cross-pi-gcc-8.3.0-0/include/J118/Canvas.h;/home/joseph/Software/cross-pi-gcc-8.3.0-0/include/J118/Color.h;/home/joseph/Software/cross-pi-gcc-8.3.0-0/include/J118/Exception.h;/home/joseph/Software/cross-pi-gcc-8.3.0-0/include/J118/FontMap.h;/home/joseph/Software/cross-pi-gcc-8.3.0-0/include/J118/IPCallback.h;/home/joseph/Software/cross-pi-gcc-8.3.0-0/include/J118/IPServer.h;/home/joseph/Software/cross-pi-gcc-8.3.0-0/include/J118/Matrix.h;/home/joseph/Software/cross-pi-gcc-8.3.0-0/include/J118/Output.h;/home/joseph/Software/cross-pi-gcc-8.3.0-0/include/J118/Packet.h;/home/joseph/Software/cross-pi-gcc-8.3.0-0/include/J118/PeriodicThread.h;/home/joseph/Software/cross-pi-gcc-8.3.0-0/include/J118/Point2D.h;/home/joseph/Software/cross-pi-gcc-8.3.0-0/include/J118/Polygon.h;/home/joseph/Software/cross-pi-gcc-8.3.0-0/include/J118/Thread.h;/home/joseph/Software/cross-pi-gcc-8.3.0-0/include/J118/UDPServer.h;/home/joseph/Software/cross-pi-gcc-8.3.0-0/include/J118/UtilityMacros.h;/home/joseph/Software/cross-pi-gcc-8.3.0-0/include/J118/Vector2D.h")
+   "/usr/include/J118/ArgParse.h;/usr/include/J118/Callback.h;/usr/include/J118/Canvas.h;/usr/include/J118/Color.h;/usr/include/J118/Exception.h;/usr/include/J118/FontMap.h;/usr/include/J118/IPCallback.h;/usr/include/J118/IPServer.h;/usr/include/J118/Matrix.h;/usr/include/J118/Output.h;/usr/include/J118/Packet.h;/usr/include/J118/PeriodicThread.h;/usr/include/J118/Point2D.h;/usr/include/J118/Thread.h;/usr/include/J118/UDPServer.h;/usr/include/J118/UtilityMacros.h;/usr/include/J118/Vector2D.h")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/joseph/Software/cross-pi-gcc-8.3.0-0/include/J118" TYPE FILE FILES
-    "/home/joseph/Software/J118/include/J118/ArgParse.h"
-    "/home/joseph/Software/J118/include/J118/Callback.h"
-    "/home/joseph/Software/J118/include/J118/Canvas.h"
-    "/home/joseph/Software/J118/include/J118/Color.h"
-    "/home/joseph/Software/J118/include/J118/Exception.h"
-    "/home/joseph/Software/J118/include/J118/FontMap.h"
-    "/home/joseph/Software/J118/include/J118/IPCallback.h"
-    "/home/joseph/Software/J118/include/J118/IPServer.h"
-    "/home/joseph/Software/J118/include/J118/Matrix.h"
-    "/home/joseph/Software/J118/include/J118/Output.h"
-    "/home/joseph/Software/J118/include/J118/Packet.h"
-    "/home/joseph/Software/J118/include/J118/PeriodicThread.h"
-    "/home/joseph/Software/J118/include/J118/Point2D.h"
-    "/home/joseph/Software/J118/include/J118/Polygon.h"
-    "/home/joseph/Software/J118/include/J118/Thread.h"
-    "/home/joseph/Software/J118/include/J118/UDPServer.h"
-    "/home/joseph/Software/J118/include/J118/UtilityMacros.h"
-    "/home/joseph/Software/J118/include/J118/Vector2D.h"
+file(INSTALL DESTINATION "/usr/include/J118" TYPE FILE FILES
+    "/home/pi/Software/J118/include/J118/ArgParse.h"
+    "/home/pi/Software/J118/include/J118/Callback.h"
+    "/home/pi/Software/J118/include/J118/Canvas.h"
+    "/home/pi/Software/J118/include/J118/Color.h"
+    "/home/pi/Software/J118/include/J118/Exception.h"
+    "/home/pi/Software/J118/include/J118/FontMap.h"
+    "/home/pi/Software/J118/include/J118/IPCallback.h"
+    "/home/pi/Software/J118/include/J118/IPServer.h"
+    "/home/pi/Software/J118/include/J118/Matrix.h"
+    "/home/pi/Software/J118/include/J118/Output.h"
+    "/home/pi/Software/J118/include/J118/Packet.h"
+    "/home/pi/Software/J118/include/J118/PeriodicThread.h"
+    "/home/pi/Software/J118/include/J118/Point2D.h"
+    "/home/pi/Software/J118/include/J118/Thread.h"
+    "/home/pi/Software/J118/include/J118/UDPServer.h"
+    "/home/pi/Software/J118/include/J118/UtilityMacros.h"
+    "/home/pi/Software/J118/include/J118/Vector2D.h"
     )
 endif()
 
@@ -88,5 +87,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/joseph/Software/J118/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/pi/Software/J118/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

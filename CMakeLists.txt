@@ -23,7 +23,7 @@ elseif(${CMAKE_SYSTEM_NAME} MATCHES "Windows")
 	#add_definitions( /wd4996 )
 endif()
 
-file (GLOB SRCS "src/*.cpp" "src/Concurrency/*.cpp" "src/Sockets/*.cpp" "src/Graphics/*.cpp" "src/Math/*.cpp")
+file (GLOB SRCS "src/*.cpp" "src/Concurrency/*.cpp" "src/Sockets/*.cpp")
 file (GLOB HDRS "include/${PROJECT_NAME}/*.h")
 aux_source_directory(include/${PROJECT_NAME}/ J118_HEADERS)
 
@@ -39,6 +39,10 @@ if(DEFINED ENV{CMAKE_CROSS_COMPILE_TOOL_CHAIN})
 	set(CMAKE_CXX_COMPILER ${tools}/bin/arm-linux-gnueabihf-g++)
 	install(TARGETS ${PROJECT_NAME} DESTINATION $ENV{CMAKE_CROSS_COMPILE_TOOL_CHAIN}/lib)
 	install(FILES ${HDRS} DESTINATION $ENV{CMAKE_CROSS_COMPILE_TOOL_CHAIN}/include/J118)
+else()
+	install(TARGETS ${PROJECT_NAME} DESTINATION /usr/lib)
+	install(FILES ${HDRS} DESTINATION /usr/include/J118)
+
 endif()
 
 if(DEFINED ENV{J118_BUILD_OUPUT_DIRECTORY})
