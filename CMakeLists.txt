@@ -28,9 +28,13 @@ file (GLOB HDRS "include/${PROJECT_NAME}/*.h")
 aux_source_directory(include/${PROJECT_NAME}/ J118_HEADERS)
 
 include_directories(include)
+include_directories($ENV{CMAKE_CROSS_COMPILE_TOOL_CHAIN}/include/)
+
+#include_directories($ENV{CMAKE_CROSS_COMPILE_TOOL_CHAIN}/include/SDL2)
 
 
 add_library(${PROJECT_NAME} ${HDRS} ${SRCS})
+target_link_libraries(${PROJECT_NAME} SDL)
 
 if(DEFINED ENV{CMAKE_CROSS_COMPILE_TOOL_CHAIN})
 	message(STATUS "Cross Compile Tool Chain Set $ENV{CMAKE_CROSS_COMPILE_TOOL_CHAIN}")
@@ -50,6 +54,8 @@ if(DEFINED ENV{J118_BUILD_OUPUT_DIRECTORY})
 	message(STATUS "Saving binaries to $ENV{J118_BUILD_OUPUT_DIRECTORY}")
 	file(INSTALL ${J118_HEADERS} DESTINATION "$ENV{J118_BUILD_OUPUT_DIRECTORY}/include/J118")
 endif()
+
+
 
 
 

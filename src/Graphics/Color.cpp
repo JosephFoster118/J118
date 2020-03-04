@@ -4,11 +4,12 @@ namespace J118
     
 
 
-Color::Color(uint8_t r, uint8_t g, uint8_t b)
+Color::Color(uint8_t r, uint8_t g, uint8_t b, uint8_t a)
 {
     red = r;
     green = g;
     blue = b;
+    alpha = a;
 }
 
 Color::Color(uint16_t color)
@@ -52,6 +53,11 @@ bool Color::operator==(const Color& c)
         return false;
     }
     return true;
+}
+
+uint32_t Color::getColorSDL()
+{
+    return (alpha << 24) | (blue << 16) | (green << 8) | red;
 }
 
 uint8_t Color::getRed(){return red;}
